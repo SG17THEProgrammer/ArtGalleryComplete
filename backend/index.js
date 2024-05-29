@@ -14,7 +14,6 @@ const {fileURLToPath} = require("url");
 const contactRoute = require("./routes/contactRoute.js")
 dotenv.config()
 const path = require('path')
-const express = require('express')
 
 
 const corsOptions = {
