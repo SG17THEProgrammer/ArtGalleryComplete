@@ -1,0 +1,178 @@
+.body-outer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  
+  }
+  .outer-img{
+    background-image: linear-gradient(-45deg, #77000b 0%, #ff0e0e 100%);box-shadow: 0px 30px 139px 0px rgba(10, 22, 31, 0.26);
+  border-radius: 30px;
+  width: 70vh;
+  overflow: hidden;
+  height: 85vh;
+  position: relative;
+  left: 90px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  }
+  
+  
+  .outer-img>img {
+  object-fit: contain;
+  width: 500px;
+  display: block;
+  object-position: left center;
+  opacity: 0.2;
+  transform: rotate(-90deg) translateY(-50%);
+  max-width: inherit;
+  left: 10px;
+  position: absolute;
+  }
+  .outer-detail{
+    position: relative;
+    right: 100px;
+    height: 65vh;
+    width: 110vh;
+    border-radius: 2rem;
+    background-image: url("https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405223/starwars/item-4-bg.webp");
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 3;
+  
+  }
+  .imgprod > img{
+    position: absolute;
+    top: 280px;
+    rotate: -20deg;
+    left: 300px;
+    z-index: 99;
+    height: 50vh;
+    width: 70vh;
+    background-size: cover;
+  
+  }
+  .outer-detail-prod{
+    width: 70%;
+  
+  }
+  .outer-detail-prod h1{
+    text-align: center;
+    color: aliceblue;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  
+  }
+  .h6nam{
+    color: aliceblue;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-top: 50px;
+    font-size: 30px;   
+  }
+  .h6dec{
+    color: rgba(240, 248, 255, 0.603);
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;   
+  }
+  .h6pri{
+    color: rgb(255, 60, 0);
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-size: 28px;   
+  }
+  .h6cat{
+    color: rgb(255, 255, 255);
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;   
+  }
+  
+  @media (max-width: 570px) {
+  
+  .body-outer{
+    display: flex;
+    flex-direction: column;
+  width: 100vw;
+  }
+  
+  .outer-img{
+  border-radius: 20px;
+  width: 90vw;
+  overflow: hidden;
+  height: 280px;
+  position: relative;
+  left: 0px;
+  top: 20px;
+  z-index: 2;
+  }
+  
+  
+  .outer-detail{
+    right: 0px;
+    top: -50px;
+    min-height: 400px;
+    width: 85vw;
+    border-radius: 1rem;
+    justify-content: center;
+  }
+  
+  .imgprod > img{
+    top: 100px;
+    rotate: 0deg;
+    left: 45px;
+    height: 200px;
+    width: 300px;
+  
+  }
+  .outer-detail-prod {
+    width: 90%;
+  }
+  
+  .outer-detail-prod h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  
+  }
+  .h6nam{
+    color: aliceblue;
+    margin-left: 0px;
+    margin-bottom: 15px;
+    margin-top: 50px;
+    font-size: 20px;   
+  }
+  .h6dec{
+    color: rgba(240, 248, 255, 0.603);
+    margin-left: 0px;
+    margin-bottom: 15px;
+    font-size: 15px;   
+  }
+  .h6pri{
+    color: rgb(255, 60, 0);
+    margin-left: 0px;
+    margin-bottom: 15px;
+    font-size: 15px;   
+  }
+  .h6cat{
+    color: rgb(255, 255, 255);
+    margin-left: 0px;
+    margin-bottom: 15px;
+    font-size: 15px;   
+  }
+  .addtocart{
+    height: 40px;
+    width: 120px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  }

@@ -1,0 +1,26 @@
+/* body{
+    background-color: white;
+} */
+.ctn{
+    border: 1px solid red ;
+    margin: 0 40px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 500px;
+}
+.title1{
+    color: white;
+    text-decoration: underline;
+    
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    border: 1px solid red ;
+    height: 470px;
+    width: 400px;
+    padding:0 20px;
+}
