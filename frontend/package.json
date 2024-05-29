@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
-    "dev": "vite",
+    "dev": "vite",  
     "build": "vite  --openssl-legacy-provider  build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
