@@ -19,7 +19,7 @@ const path = require('path')
 
 const corsOptions = {
     origin: "http://localhost:5173",
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD","OPTIONS"],
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD"],
     credentials: true,
 };
 app.use(cors(corsOptions));
@@ -27,7 +27,7 @@ app.use(express.json())
 app.use(morgan("dev"))
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
-// console.log(path.join(__dirname,'../frontend/dist'))
+// console.log(path.join(__dirname,'../frontend/dist/index.html'))
 app.use(express.static(path.join(__dirname,'../frontend/dist')))
 
 // app.get('/',(req,res)=>{
@@ -35,6 +35,9 @@ app.use(express.static(path.join(__dirname,'../frontend/dist')))
 //         message:"welcome to Art Gallery"
 //     })
 // })
+app.get('*',(req,res)=>{
+    res.sendFile(path.join(__dirname,'../frontend/dist/index.html'))
+})
 
 app.use('/api/v1/user',userRoute);
 app.use('/api/v1/product',productRoute);
@@ -43,9 +46,6 @@ app.use('/api/v1/cart',cartRoute);
 app.use('/api/v1',contactRoute);
 
 
-app.get('*',(req,res)=>{
-    res.sendFile(path.join(__dirname,'../frontend/dist/index.html'))
-})
 
 app.use(errorMiddleware);
 
