@@ -27,15 +27,15 @@ app.use(morgan("dev"))
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 // console.log(path.join(__dirname,'../frontend/dist/index.html'))
-app.use(express.static(path.join(__dirname,'../frontend/dist')))
+// app.use(express.static(path.join(__dirname,'../frontend/dist')))
 
-// app.get('/',(req,res)=>{
-//     res.sendFile(path.join(__dirname,'../frontend/dist/index.html'))
-// })
-
-app.get('*',(req,res)=>{
-    res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
+app.get('/',(req,res)=>{
+    res.sendFile(path.join(__dirname,'../frontend/dist/index.html'))
 })
+
+// app.get('*',(req,res)=>{
+//     res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
+// })
 
 app.use('/api/v1/user',userRoute);
 app.use('/api/v1/product',productRoute);
