@@ -30,6 +30,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // console.log(path.join(__dirname,'../frontend/dist'))
 app.use(express.static(path.join(__dirname,'../frontend/dist')))
 
+// app.get('/',(req,res)=>{
+//     res.send({
+//         message:"welcome to Art Gallery"
+//     })
+// })
 
 app.use('/api/v1/user',userRoute);
 app.use('/api/v1/product',productRoute);
@@ -37,11 +42,6 @@ app.use('/api/v1/team',teamRoute);
 app.use('/api/v1/cart',cartRoute);
 app.use('/api/v1',contactRoute);
 
-app.get('/',(req,res)=>{
-    res.send({
-        message:"welcome to Art Gallery"
-    })
-})
 
 app.get('*',(req,res)=>{
     res.sendFile(path.join(__dirname,'../frontend/dist/index.html'))
