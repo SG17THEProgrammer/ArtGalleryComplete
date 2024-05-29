@@ -7,6 +7,12 @@ process.on("uncaughtException", (err) => {
     process.exit(1);
   });
 
+app.use(express.static(path.join(__dirname,'../frontend/dist')))
+
+app.get('*',(req,res)=>{
+  res.sendFile(path.join(__dirname,'../frontend/dist/index.html'))
+})
+
 connectDatabase();
 
 const PORT=process.env.PORT || 8000;
