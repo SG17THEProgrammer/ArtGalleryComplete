@@ -11,7 +11,7 @@ import Loader from '../components/Loader';
 const Register = () => {
   const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate()
-  const {storeTokensInLS}  =useAuth()
+  const {storeTokensInLS,backendApi}  =useAuth()
 
     const [showPassword,setshowPassword] = useState(false)
 
@@ -45,7 +45,7 @@ const Register = () => {
     
     try {
       setIsLoading(true);
-      const response = await fetch(`https://artgallerycomplete.onrender.com/user/register`, {
+      const response = await fetch(`${backendApi}/user/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

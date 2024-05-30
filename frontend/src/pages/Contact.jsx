@@ -12,7 +12,7 @@ const Contact = () => {
     const [contactData, setcontactData] = useState(true)
     const [isLoading,setIsLoading]= useState(false)
 
-    const { isLoggedIn ,user } = useAuth()
+    const { isLoggedIn ,user ,backendApi} = useAuth()
     // console.log(user)
 
     const [contact , setContact] = useState({
@@ -47,7 +47,7 @@ const Contact = () => {
         e.preventDefault();
                 try {
                     setIsLoading(true)
-          const response = await fetch('https://artgallerycomplete.onrender.com/contact', {
+          const response = await fetch(`${backendApi}/contact`, {
             method: 'POST',
             headers: {
                 Authorization:token,
