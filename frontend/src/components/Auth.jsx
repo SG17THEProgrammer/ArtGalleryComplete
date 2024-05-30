@@ -15,7 +15,8 @@ export const AuthProvider = ({ children }) => {
   axios.defaults.headers.common["Authorization"] = user ? token : "";
 
 
-  const backendApi = "https://glorious-hat-toad.cyclic.app/api/v1"
+  // const backendApi = "https://glorious-hat-toad.cyclic.app/api/v1"
+  const backendApi = "https://artgallerycomplete.onrender.com"
 
 
   const storeTokensInLS = (serverToken) => {
@@ -38,7 +39,7 @@ export const AuthProvider = ({ children }) => {
 
     if (isLoggedIn) {
       try {
-        const response = await fetch(`https://glorious-hat-toad.cyclic.app/api/v1/user/myprofile`, {
+        const response = await fetch(`https://artgallerycomplete.onrender.com/user/myprofile`, {
           method: "GET",
           headers: {
             // Authorization: `Bearer ${token}`,
@@ -65,7 +66,7 @@ export const AuthProvider = ({ children }) => {
   const getTeam = async () => {
 
     try {
-      const response = await fetch(`https://glorious-hat-toad.cyclic.app/api/v1/team/get-team/`, {
+      const response = await fetch(`https://artgallerycomplete.onrender.com/team/get-team/`, {
         method: "GET",
       });
 
@@ -87,7 +88,7 @@ export const AuthProvider = ({ children }) => {
   const getProduct = async () => {
     try {
       setIsLoading(true)
-      const response = await fetch(`https://glorious-hat-toad.cyclic.app/api/v1/product/get-product`, {
+      const response = await fetch(`https://artgallerycomplete.onrender.com/product/get-product`, {
         method: "GET",
       });
 
@@ -112,7 +113,7 @@ export const AuthProvider = ({ children }) => {
   const showCart = async () => {
     try {
       setIsLoading(true)
-      const response = await fetch(`https://glorious-hat-toad.cyclic.app/api/v1/cart/show-cartproducts`, {
+      const response = await fetch(`https://artgallerycomplete.onrender.com/cart/show-cartproducts`, {
         headers: {
           method: "GET",
           Authorization: token
@@ -140,7 +141,7 @@ export const AuthProvider = ({ children }) => {
   const particularUserProduct = async () => {
     try {
       setIsLoading(true)
-      const response = await fetch(`https://glorious-hat-toad.cyclic.app/api/v1/product/get-myproduct`, {
+      const response = await fetch(`https://artgallerycomplete.onrender.com/product/get-myproduct`, {
         headers: {
           method: "GET",
           Authorization: token

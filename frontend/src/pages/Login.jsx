@@ -40,7 +40,7 @@ const Login = () => {
 
     try {
       setIsLoading(true);
-      const response = await fetch(`https://glorious-hat-toad.cyclic.app/api/v1/user/login`, {
+      const response = await fetch(`https://artgallerycomplete.onrender.com/user/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

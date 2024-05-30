@@ -45,7 +45,7 @@ const Register = () => {
     
     try {
       setIsLoading(true);
-      const response = await fetch(`https://glorious-hat-toad.cyclic.app/api/v1/user/register`, {
+      const response = await fetch(`https://artgallerycomplete.onrender.com/user/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

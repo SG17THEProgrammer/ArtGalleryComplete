@@ -48,7 +48,7 @@ const CreateWork = () => {
                 console.log(key[0] + ", " + key[1]);
             }
             const res = await axios.post(
-                `https://glorious-hat-toad.cyclic.app/api/v1/product/create-product`,
+                `https://artgallerycomplete.onrender.com/product/create-product`,
                 newForm, {
                 headers: {
                     Authorization: token

@@ -44,7 +44,7 @@ const Cart = () => {
     const deletecartItem = async (id) => {
         try {
             setIsLoading(true)
-            const response = await axios.delete(`https://glorious-hat-toad.cyclic.app/api/v1/cart/delete-cartproduct/${id}`, {
+            const response = await axios.delete(`https://artgallerycomplete.onrender.com/cart/delete-cartproduct/${id}`, {
                 headers: {
                     // method: "DELETE",
                     Authorization: token
@@ -117,7 +117,7 @@ useEffect(() => {
                             return <div className="row border-top border-bottom" key={_id}>
                                 <div className="row main1 align-items-center">
                                     <div className="col-2">
-                                        <img className="img-fluid img" src={`https://glorious-hat-toad.cyclic.app/api/v1/product/product-photo/${_id}`} /></div>
+                                        <img className="img-fluid img" src={`https://artgallerycomplete.onrender.com/product/product-photo/${_id}`} /></div>
                                     <div className="col">
                                         <div className="row ">{name}</div>
                                         <div className="row sidebar" style={{ width: "140px", overflow: "scroll" }}>{description}</div>

@@ -83,11 +83,11 @@ const Navbar = () => {
 {isLoggedIn?
       <NavLink to='/about' style={{color:"black"}}>
       
-      {user.photo?<img src={`https://glorious-hat-toad.cyclic.app/api/v1/user/photo/${user._id}`} alt="error" className='icn3' />:
+      {user.photo?<img src={`https://artgallerycomplete.onrender.com/user/photo/${user._id}`} alt="error" className='icn3' />:
       user.avatar? <img src={user.avatar} alt="error" className='icn3' />: <FaRegUserCircle className='icn'/>}
       </NavLink>:
       <NavLink to='/entry' style={{color:"black"}} onClick={alert}> 
-      {user.photo?<img src={`https://glorious-hat-toad.cyclic.app/api/v1/user/photo/${user._id}`} alt="error" className='icn3' />:
+      {user.photo?<img src={`https://artgallerycomplete.onrender.com/user/photo/${user._id}`} alt="error" className='icn3' />:
       user.avatar? <img src={user.avatar} alt="error" className='icn3' />: <FaRegUserCircle className='icn'/>}
       </NavLink>}
       </div>

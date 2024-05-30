@@ -47,7 +47,7 @@ const Contact = () => {
         e.preventDefault();
                 try {
                     setIsLoading(true)
-          const response = await fetch('https://glorious-hat-toad.cyclic.app/api/v1/contact', {
+          const response = await fetch('https://artgallerycomplete.onrender.com/contact', {
             method: 'POST',
             headers: {
                 Authorization:token,

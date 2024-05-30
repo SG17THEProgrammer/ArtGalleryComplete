@@ -68,7 +68,7 @@ const About = () => {
                 console.log(key[0] + ", " + key[1]);
             }
             const res = await axios.put(
-                `https://glorious-hat-toad.cyclic.app/api/v1/user/updateprofile/${user._id}`,
+                `https://artgallerycomplete.onrender.com/user/updateprofile/${user._id}`,
                 newForm
             );
             console.log(res)
@@ -116,7 +116,7 @@ const About = () => {
                                             src={
                                                 !user.photo
                                                     ? user.avatar
-                                                    : `https://glorious-hat-toad.cyclic.app/api/v1/user/photo/${user._id}`
+                                                    : `https://artgallerycomplete.onrender.com/user/photo/${user._id}`
                                             }
                                             alt="error"
                                             className="image" style={{ marginRight: "13px" }}

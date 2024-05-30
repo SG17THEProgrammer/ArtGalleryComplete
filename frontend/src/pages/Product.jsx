@@ -25,7 +25,7 @@ const Product = ({name ,price,_id,description,user }) => {
     const addToCart = async (id) => {
         try {
             setisLoad(true)
-            const response = await axios.post(`https://glorious-hat-toad.cyclic.app/api/v1/cart/add-cartproducts/${id}`, id, {
+            const response = await axios.post(`https://artgallerycomplete.onrender.com/cart/add-cartproducts/${id}`, id, {
                 headers: {
                     Authorization: token
                 }
@@ -46,7 +46,7 @@ const Product = ({name ,price,_id,description,user }) => {
     const handleDelete = async (id) => {
         try {
             setisLoad(true)
-            const response = await axios.delete(`https://glorious-hat-toad.cyclic.app/api/v1/product/delete-product/${id}`, {
+            const response = await axios.delete(`https://artgallerycomplete.onrender.com/product/delete-product/${id}`, {
                 headers: {
                     // method: "DELETE",
                     Authorization: token
@@ -83,7 +83,7 @@ const Product = ({name ,price,_id,description,user }) => {
                                 <div className="top">
                                 <NavLink to={`/menu/${_id}`} style={{ textDecoration: "none", color: "black" }}>
                                     <img
-                                        src={`https://glorious-hat-toad.cyclic.app/api/v1/product/product-photo/${_id}`}
+                                        src={`https://artgallerycomplete.onrender.com/product/product-photo/${_id}`}
                                         className="card-img-top"
                                         alt={"p.name"}  onClick={() => window.scrollTo({ top: "0", behavior: "smooth" })}   
                                     />
