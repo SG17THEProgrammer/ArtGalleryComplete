@@ -20,7 +20,7 @@ const connectDatabase = require("./database/db.js");
 const corsOptions = {
     // origin: "http://localhost:5175",
     // origin: "https://artgallerycomplete.onrender.com",
-    origin: "https://glittery-gumdrop-b48793.netlify.app/",
+    origin: "https://reliable-quokka-25c833.netlify.app/",
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD"],
     credentials: true,
 };
