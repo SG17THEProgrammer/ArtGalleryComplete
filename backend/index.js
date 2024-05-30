@@ -18,7 +18,8 @@ const connectDatabase = require("./database/db.js");
 
 
 const corsOptions = {
-    origin: "http://localhost:5175",
+    // origin: "http://localhost:5175",
+    origin: "https://artgallerycomplete.onrender.com",
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD"],
     credentials: true,
 };
