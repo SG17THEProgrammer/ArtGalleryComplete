@@ -16,7 +16,7 @@ export const AuthProvider = ({ children }) => {
 
 
   // const backendApi = "https://glorious-hat-toad.cyclic.app/api/v1"
-  const backendApi = "https://reliable-quokka-25c833.netlify.app/"
+  const backendApi = "https://artgallerycomplete.onrender.com"
 
 
   const storeTokensInLS = (serverToken) => {
