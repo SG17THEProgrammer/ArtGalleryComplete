@@ -99,7 +99,7 @@ const Edit = () => {
                 />
             ) : (
                 <img
-                        src={`https://artgallerycomplete.onrender.com/product/product-photo/${productDisplay._id}`}
+                        src={`${backendApi}/product/product-photo/${productDisplay._id}`}
                         alt="image" className='img10' />
             )}
             <label htmlFor='file' className='label2'>

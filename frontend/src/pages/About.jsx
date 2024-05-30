@@ -14,9 +14,8 @@ import Authorize from '../components/Authorize'
 import Footer from '../components/Footer'
 const About = () => {
 
-    const { isLoggedIn, user } = useAuth()
+    const { isLoggedIn, user ,particularUserItem ,backendApi} = useAuth()
 
-    const { particularUserItem } = useAuth()
     console.log(particularUserItem)
 
     const [isLoading, setIsLoading] = useState(false);
@@ -68,7 +67,7 @@ const About = () => {
                 console.log(key[0] + ", " + key[1]);
             }
             const res = await axios.put(
-                `https://artgallerycomplete.onrender.com/user/updateprofile/${user._id}`,
+                `${backendApi}/user/updateprofile/${user._id}`,
                 newForm
             );
             console.log(res)
@@ -116,7 +115,7 @@ const About = () => {
                                             src={
                                                 !user.photo
                                                     ? user.avatar
-                                                    : `https://artgallerycomplete.onrender.com/user/photo/${user._id}`
+                                                    : `${backendApi}/user/photo/${user._id}`
                                             }
                                             alt="error"
                                             className="image" style={{ marginRight: "13px" }}

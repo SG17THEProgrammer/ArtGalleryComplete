@@ -10,7 +10,7 @@ import { toast } from 'react-toastify';
 const Navbar = () => {
 
   const {user}  = useAuth()
-  const {isLoggedIn} = useAuth()
+  const {isLoggedIn ,backendApi} = useAuth()
   const [dropdownMenu  ,setdropdownMenu] = useState(false)
   
   const { cartItem } = useAuth()
@@ -83,11 +83,11 @@ const Navbar = () => {
 {isLoggedIn?
       <NavLink to='/about' style={{color:"black"}}>
       
-      {user.photo?<img src={`https://artgallerycomplete.onrender.com/user/photo/${user._id}`} alt="error" className='icn3' />:
+      {user.photo?<img src={`${backendApi}/user/photo/${user._id}`} alt="error" className='icn3' />:
       user.avatar? <img src={user.avatar} alt="error" className='icn3' />: <FaRegUserCircle className='icn'/>}
       </NavLink>:
       <NavLink to='/entry' style={{color:"black"}} onClick={alert}> 
-      {user.photo?<img src={`https://artgallerycomplete.onrender.com/user/photo/${user._id}`} alt="error" className='icn3' />:
+      {user.photo?<img src={`${backendApi}/user/photo/${user._id}`} alt="error" className='icn3' />:
       user.avatar? <img src={user.avatar} alt="error" className='icn3' />: <FaRegUserCircle className='icn'/>}
       </NavLink>}
       </div>

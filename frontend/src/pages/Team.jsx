@@ -6,7 +6,7 @@ import { useAuth } from '../components/Auth'
 import Loader from '../components/Loader'
 
 const Team = () => {
-    const {team} =useAuth()
+    const {team,backendApi} =useAuth()
     console.log(team)
 
     const yash = team[0];
@@ -42,14 +42,14 @@ const Team = () => {
                     <li className='li'><a className='anc' target='_blank' href={yash.instagram}><i className="fab fa-instagram" aria-hidden="true"></i></a></li>
                   </ul>
                 <div className="profile_serial">01</div>
-                <img src={`https://artgallerycomplete.onrender.com/team/team-photo/${yash._id}`} alt="error" className='im'/>
+                <img src={`${backendApi}/team/team-photo/${yash._id}`} alt="error" className='im'/>
             </div>
             
             <div>
                 <span className='span' style={{color:"white"}}>{shray.name}</span>
                 <span className='span' style={{color:"white"}}>{shray.about}</span>
                 <span className='span'></span>
-                <img src={`https://artgallerycomplete.onrender.com/team/team-photo/${shray._id}`} alt="error" className='im'/>
+                <img src={`${backendApi}/team/team-photo/${shray._id}`} alt="error" className='im'/>
                 <div className="profile_serial">03</div>
                 <ul className="profile_media2 ul">
                     <li className='li'><a className='anc' target='_blank' href={shray.facebook}><i className="fab fa-facebook" aria-hidden="true"></i></a></li>
@@ -73,7 +73,7 @@ const Team = () => {
                   </ul>
                 <span className='span'></span>
                 <div className="profile_serial">02</div>
-                <img src={`https://artgallerycomplete.onrender.com/team/team-photo/${geeta._id}`}alt="error" className='im'/>
+                <img src={`${backendApi}/team/team-photo/${geeta._id}`}alt="error" className='im'/>
             </div>
             <div>
                 <span className='span' style={{color:"white"}}>{sandeep.name}</span>
@@ -86,7 +86,7 @@ const Team = () => {
                     <li className='li'><a className='anc' target='_blank' href={sandeep.instagram}><i className="fab fa-instagram" aria-hidden="true"></i></a></li>
                   </ul>
                 <span className='span'></span>
-                <img src={`https://artgallerycomplete.onrender.com/team/team-photo/${sandeep._id}`} alt="error" className='im'/>
+                <img src={`${backendApi}/team/team-photo/${sandeep._id}`} alt="error" className='im'/>
                 <div className="profile_serial">04</div>
             </div>
         </div>

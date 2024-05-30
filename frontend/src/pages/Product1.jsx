@@ -6,14 +6,14 @@ import { toast } from 'react-toastify';
 import axios from 'axios';
 
 const Product1 = ({title,navbar}) => {
-    const {products} = useAuth()
+    const {products,backendApi} = useAuth()
     const [isLoad, setisLoad] = useState(false)
     const token = localStorage.getItem('token')
 
     const addToCart = async (id) => {
         try {
             setisLoad(true)
-            const response = await axios.post(`https://artgallerycomplete.onrender.com/cart/add-cartproducts/${id}`, id, {
+            const response = await axios.post(`${backendApi}/cart/add-cartproducts/${id}`, id, {
                 headers: {
                     Authorization: token
                 }
@@ -47,7 +47,7 @@ const Product1 = ({title,navbar}) => {
                     <div className="container-card" key={_id}>
                         <div className="top">
                             <img
-                                src={`https://artgallerycomplete.onrender.com/product/product-photo/${_id}`}
+                                src={`${backendApi}/product/product-photo/${_id}`}
                                 className="card-img-top"
                                 alt={"p.name"}
                             />

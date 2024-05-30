@@ -16,7 +16,7 @@ export const AuthProvider = ({ children }) => {
 
 
   // const backendApi = "https://glorious-hat-toad.cyclic.app/api/v1"
-  const backendApi = "https://artgallerycomplete.onrender.com"
+  const backendApi = "https://reliable-quokka-25c833.netlify.app/"
 
 
   const storeTokensInLS = (serverToken) => {
@@ -39,7 +39,7 @@ export const AuthProvider = ({ children }) => {
 
     if (isLoggedIn) {
       try {
-        const response = await fetch(`https://artgallerycomplete.onrender.com/user/myprofile`, {
+        const response = await fetch(`${backendApi}/user/myprofile`, {
           method: "GET",
           headers: {
             // Authorization: `Bearer ${token}`,
@@ -66,7 +66,7 @@ export const AuthProvider = ({ children }) => {
   const getTeam = async () => {
 
     try {
-      const response = await fetch(`https://artgallerycomplete.onrender.com/team/get-team/`, {
+      const response = await fetch(`${backendApi}/team/get-team/`, {
         method: "GET",
       });
 
@@ -88,7 +88,7 @@ export const AuthProvider = ({ children }) => {
   const getProduct = async () => {
     try {
       setIsLoading(true)
-      const response = await fetch(`https://artgallerycomplete.onrender.com/product/get-product`, {
+      const response = await fetch(`${backendApi}/product/get-product`, {
         method: "GET",
       });
 
@@ -113,7 +113,7 @@ export const AuthProvider = ({ children }) => {
   const showCart = async () => {
     try {
       setIsLoading(true)
-      const response = await fetch(`https://artgallerycomplete.onrender.com/cart/show-cartproducts`, {
+      const response = await fetch(`${backendApi}/cart/show-cartproducts`, {
         headers: {
           method: "GET",
           Authorization: token
@@ -141,7 +141,7 @@ export const AuthProvider = ({ children }) => {
   const particularUserProduct = async () => {
     try {
       setIsLoading(true)
-      const response = await fetch(`https://artgallerycomplete.onrender.com/product/get-myproduct`, {
+      const response = await fetch(`${backendApi}/product/get-myproduct`, {
         headers: {
           method: "GET",
           Authorization: token

@@ -16,12 +16,11 @@ const Card = () => {
 
   const { id } = useParams();
 
-  const { products } = useAuth()
+  const { products , backendApi} = useAuth()
   console.log(products)
 
   const { user } = useAuth()
   console.log(user)
-  const { backendApi } = useAuth()
 
   const navigate = useNavigate();
 
@@ -36,7 +35,7 @@ const Card = () => {
   const addToCart = async (id) => {
     try {
       setisLoad(true)
-      const response = await axios.post(`https://artgallerycomplete.onrender.com/cart/add-cartproducts/${id}`, id, {
+      const response = await axios.post(`${backendApi}/cart/add-cartproducts/${id}`, id, {
         headers: {
           Authorization: token
         }
@@ -55,7 +54,7 @@ const Card = () => {
   const handleDelete = async (id) => {
     try {
       setIsLoading(true)
-      const response = await axios.delete(`https://artgallerycomplete.onrender.com/product/delete-product/${id}`, {
+      const response = await axios.delete(`${backendApi}/product/delete-product/${id}`, {
         headers: {
           // method: "DELETE",
           Authorization: token
@@ -112,7 +111,7 @@ const Card = () => {
 
         <div className="product-image">
 
-          <img src={`https://artgallerycomplete.onrender.com/product/product-photo/${productDisplay._id}`} alt="err" className='img8' />
+          <img src={`${backendApi}/product/product-photo/${productDisplay._id}`} alt="err" className='img8' />
 
 
           {user.email == productDisplay.user.email ? <div className="info">

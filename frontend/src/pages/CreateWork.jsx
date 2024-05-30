@@ -11,7 +11,7 @@ import Loader from '../components/Loader';
 import { useAuth } from '../components/Auth';
 import Authorize from '../components/Authorize';
 const CreateWork = () => {
-    const {isLoggedIn} = useAuth();
+    const {isLoggedIn,backendApi} = useAuth();
     console.log(isLoggedIn)
 
     const [photo, setPhoto] = useState("");
@@ -48,7 +48,7 @@ const CreateWork = () => {
                 console.log(key[0] + ", " + key[1]);
             }
             const res = await axios.post(
-                `https://artgallerycomplete.onrender.com/product/create-product`,
+                `${backendApi}/product/create-product`,
                 newForm, {
                 headers: {
                     Authorization: token
