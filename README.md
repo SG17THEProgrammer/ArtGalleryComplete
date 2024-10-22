@@ -1,1 +1,1 @@
-Website Hosted : https://whimsical-crisp-f0c94f.netlify.app/
+Website Hosted : https://creativeartgallery.netlify.app/
