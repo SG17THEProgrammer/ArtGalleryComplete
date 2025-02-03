@@ -19,7 +19,7 @@ const connectDatabase = require("./database/db.js");
 
 const corsOptions = {
     // origin: "http://localhost:5175",
-    origin: "https://whimsical-crisp-f0c94f.netlify.app",
+    origin: "https://creativeartgallery.netlify.app",
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD"],
     credentials: true,
 };
